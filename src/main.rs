@@ -24,7 +24,7 @@ async fn main() {
     let app = get_app_router(cache);
 
     println!("{}", PECT_LABEL);
-    let listener = tokio::net::TcpListener::bind(&socket_address(&config))
+    let listener = tokio::net::TcpListener::bind(&socket_address(config))
         .await
         .unwrap();
     axum::serve(listener, app).await.unwrap();
