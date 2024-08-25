@@ -1,3 +1,5 @@
+use crate::pect::pect_controller;
+use crate::Cache;
 use axum::http::StatusCode;
 use axum::response::IntoResponse;
 use axum::routing::get;
@@ -6,8 +8,6 @@ use axum::Router;
 use serde_json::json;
 use std::env;
 use tower_http::add_extension::AddExtensionLayer;
-use crate::Cache;
-use crate::pect::pect_controller;
 
 pub fn get_app_router(cache: Cache<String, String>) -> Router {
     Router::new()

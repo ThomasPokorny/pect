@@ -1,17 +1,17 @@
+use crate::platform::config::config;
+use crate::platform::config::socket_address;
+use crate::platform::router::handler::get_app_router;
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
-use crate::platform::config::config;
-use crate::platform::router::handler::get_app_router;
-use crate::platform::config::socket_address;
 
-mod platform;
 mod pect;
+mod platform;
 
 const PECT_LABEL: &str = "
 ___  ____ ____ ___
 |__] |___ |     |
 |    |___ |___  |
-🗄... v.0.1 running" ;
+🗄... v.0.1 running";
 
 type Cache<K, V> = Arc<Mutex<HashMap<K, V>>>;
 

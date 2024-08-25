@@ -12,11 +12,10 @@ struct ServerConfig {
     port: u16,
 }
 
-
 // Define a struct that aggregates server and database configuration
 #[derive(Debug)]
 pub struct Config {
-    server: ServerConfig
+    server: ServerConfig,
 }
 
 // Implement methods for the Config struct to access configuration values
@@ -51,7 +50,7 @@ async fn init_config() -> Config {
 
     // Create a Config instance by combining server and database configurations
     Config {
-        server: server_config
+        server: server_config,
     }
 }
 
